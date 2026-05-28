@@ -1,8 +1,9 @@
 <?php
 session_start();
 include "koneksi.php";
-$id = $_GET['id_siswa'];
+$id = $_GET['id'];
 
+//cek apakah data ada 
 $cek = mysqli_query($conn, "SELECT * FROM siswa WHERE id='$id'");
 $data = mysqli_fetch_assoc($cek);
 
@@ -11,6 +12,7 @@ if(!$data){
     exit();
 }
 
+//proses hapus data
 $hapus = mysqli_query($conn, "DELETE FROM siswa WHERE id = '$id'");
 
 if ($hapus) {
