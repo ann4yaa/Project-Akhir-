@@ -27,6 +27,10 @@ if (isset($_POST['simpan'])){
     <p style="color:red;"><?php echo $error; ?></p>
 <?php } ?>
 
+<link rel=stylesheet href=style.css>
+<script src="script.js"></script>
+<div id="main">
+    <div class="container">
 <form method="POST">
     <label>Kode Prodi</label><br>
     <input type="text" name="kd_prodi" required><br><br>
@@ -35,3 +39,5 @@ if (isset($_POST['simpan'])){
     <button type="submit" name="simpan" class="submit">SIMPAN</button>
     <a href="prodi.php" class="batal">BATAL</a>
 </form>
+</div>
+</div>

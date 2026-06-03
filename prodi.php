@@ -35,9 +35,9 @@ $data = mysqli_query($conn, "SELECT * FROM prodi");
                 <td><?php echo $row['kd_prodi']; ?></td>
                 <td><?php echo $row['nama_prodi']; ?></td>
                 <td>
-                    <a href="edit_prodi.php?id_prodi=<?php
+                    <a class="btn-edit" href="edit_prodi.php?id_prodi=<?php
                     echo $row['id_prodi']; ?>">EDIT</a>
-                    <a href="hapus_prodi.php?id_prodi=<?php
+                    <a class="btn-delete" href="hapus_prodi.php?id_prodi=<?php
                     echo $row['id_prodi']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">DELETE</a>
                     </td>
                 </tr>

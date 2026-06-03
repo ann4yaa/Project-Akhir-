@@ -12,7 +12,7 @@ if (isset($_POST['simpan'])){
     $kd_prodi = $_POST['kd_prodi'];
     $jk = $_POST['jenis_kelamin'];
     //upload foto profil
-    $foto_profil = $_FILES['foto_profil'];
+    $foto_profil = $_FILES['foto_profil']['name'];
     $tmp = $_FILES['foto_profil']['tmp_name'];
 
     move_uploaded_file($tmp, "foto_profil/" .$foto_profil);
@@ -33,6 +33,10 @@ if (isset($_POST['simpan'])){
     <p style="color:red;"><?php echo $error; ?></p>
 <?php } ?>
 
+<link rel=stylesheet href=style.css>
+<script src="script.js"></script>
+<div id="main">
+    <div class="container">
 <form method="POST" enctype="multipart/form-data">
     <table>
         <tr>
@@ -82,3 +86,5 @@ if (isset($_POST['simpan'])){
         </tr>
 </table>
 </form>
+</div>
+</div>

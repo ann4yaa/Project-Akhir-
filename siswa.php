@@ -57,8 +57,8 @@ $data = mysqli_query($conn, "SELECT s.*, p.nama_prodi FROM siswa s
     <td><?php echo $row['tahun_ajaran']; ?></td>
     <td><?php echo $row['nama_prodi']; ?></td>
     <td>
-        <a href="edit_siswa.php?id=<?php echo $row['id'];?>">EDIT</a>
-        <a href="hapus_siswa.php?id=<?php echo $row['id'];?>" onclick="return confirm('Yakin ingin hapus?')">DELETE</a>
+        <a class="btn-edit" href="edit_siswa.php?id=<?php echo $row['id'];?>">EDIT</a>
+        <a class="btn-delete" href="hapus_siswa.php?id=<?php echo $row['id'];?>" onclick="return confirm('Yakin ingin hapus?')">DELETE</a>
     </td>
 </tr>
 <?php } ?>
