@@ -15,7 +15,7 @@ if(mysqli_num_rows($cek) > 0){
     header("location: prodi.php?p=Data tidak bisa dihapus karena masih digunakan");
 } else {
     mysqli_query($conn, "DELETE FROM prodi WHERE id_prodi='$idp'");
-    header("location: prodi.php");
+    echo "<script>alert('Data prodi berhasil dihapus'); window.location.href='prodi.php';</script>";
 }
 exit();
 ?>

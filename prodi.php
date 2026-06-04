@@ -6,6 +6,12 @@ if(!isset($_SESSION['login'])||$_SESSION['login']!= true){
 }
 include "koneksi.php";
 $data = mysqli_query($conn, "SELECT * FROM prodi");
+
+$cari = isset($_GET['cari']) ? $_GET['cari'] : '';
+$data = mysqli_query($conn, "SELECT * FROM prodi WHERE
+ kd_prodi LIKE '%$cari%'
+ OR nama_prodi LIKE '%$cari%'
+");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +30,10 @@ $data = mysqli_query($conn, "SELECT * FROM prodi");
             <hr>
             <a href="tambah_prodi.php" class="tambah">TAMBAH DATA PRODI</a>
             <br>
+            <form method="GET">
+                <input type="text" name="cari" placeholder="Cari nama prodi...">
+                <button type="submit">Cari</button>
+</form>
             <table>
                 <tr>
                     <th>Kode Prodi</th>
@@ -38,7 +48,8 @@ $data = mysqli_query($conn, "SELECT * FROM prodi");
                     <a class="btn-edit" href="edit_prodi.php?id_prodi=<?php
                     echo $row['id_prodi']; ?>">EDIT</a>
                     <a class="btn-delete" href="hapus_prodi.php?id_prodi=<?php
-                    echo $row['id_prodi']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">DELETE</a>
+                    echo $row['id_prodi']; ?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                    DELETE</a>
                     </td>
                 </tr>
             <?php } ?>

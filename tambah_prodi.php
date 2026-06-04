@@ -38,7 +38,8 @@ if (isset($_POST['simpan'])){
     <input type="text" name="kd_prodi" required><br><br>
     <label>Nama Prodi</label><br>
     <input type="text" name="nama_prodi" required><br><br>
-    <button type="submit" name="simpan" class="submit">SIMPAN</button>
+    <button type="submit" name="simpan" class="submit">
+        SIMPAN</button>
     <a href="prodi.php" class="batal">BATAL</a>
 </form>
 </div>

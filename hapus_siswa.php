@@ -16,10 +16,10 @@ if(!$data){
 $hapus = mysqli_query($conn, "DELETE FROM siswa WHERE id = '$id'");
 
 if ($hapus) {
-    header("location: siswa.php?p=Data berhasil dihapus!");
+    echo "<script>alert('Data berhasil dihapus'); window.location.href='siswa.php';</script>";
     exit();
 } else {
-    header("location: siswa.php?p=Data gagal dihapus!");
+    echo "<script>alert('Data gagal dihapus'); window.location.href='siswa.php';</script>";
     exit();
 }
 ?>

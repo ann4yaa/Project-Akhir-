@@ -39,7 +39,7 @@ if (isset($_POST['simpan'])) {
         mysqli_stmt_bind_param($stmt, "sssssss", $nis, $nama, $kelas, $tajaran, $kd_prodi, $jk, $foto_profil);
         
         if (mysqli_stmt_execute($stmt)) {
-            header('location: siswa.php');
+            echo "<script>alert('Data berhasil ditambahkan'); window.location.href='siswa.php';</script>";
             exit();
         } else {
             $error = "Gagal menyimpan data: " . mysqli_error($conn);

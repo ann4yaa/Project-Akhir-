@@ -39,7 +39,7 @@ $data = mysqli_query($conn, "SELECT s.*, p.nama_prodi FROM siswa s
             </form>
             <table>
                 <tr>
-                    <th>IMG</th>
+                    <th>Profil</th>
                     <th>NIS</th>
                     <th>Nama</th>
                     <th>Kelas</th>
@@ -66,7 +66,8 @@ $data = mysqli_query($conn, "SELECT s.*, p.nama_prodi FROM siswa s
                         <td><?php echo htmlspecialchars($row['nama_prodi']); ?></td>
                         <td>
                             <a class="btn-edit" href="edit_siswa.php?id=<?php echo $row['id']; ?>">EDIT</a>
-                            <a class="btn-delete" href="hapus_siswa.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Yakin ingin hapus?')">DELETE</a>
+                            <a class="btn-delete" href="hapus_siswa.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Yakin ingin hapus?')">
+                            DELETE</a>
                         </td>
                     </tr>
                 <?php } ?>
