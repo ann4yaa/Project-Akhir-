@@ -145,13 +145,25 @@ td {
 }
 
 form {
-  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .form-input {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 8px;
   box-sizing: border-box;
 }
 
@@ -171,6 +183,7 @@ form {
 }
 
 input[type="text"],
+input[type="password"],
 input[type="file"],
 select {
   width: 100%;
@@ -185,102 +198,103 @@ select {
 .batal,
 .btn-edit,
 .btn-delete {
-    display: inline-block;
-    text-decoration: none;
-    padding: 8px 14px;
-    border-radius: 4px;
-    color: white;
-    font-size: 14px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .submit {
-    background: #1F4E79;
+  background: #1F4E79;
 }
 
 .submit:hover {
-    background: #163d5c;
+  background: #163d5c;
 }
 
 .tambah {
-    background: #28a745;
+  background: #28a745;
 }
 
 .tambah:hover {
-    background: #218838;
+  background: #218838;
 }
 
 .batal {
-    background: #6c757d;
-    margin-top: 5px;
+  background: #6c757d;
+  margin-top: 5px;
 }
 
 .batal:hover {
-    background: #5a6268;
+  background: #5a6268;
 }
 
 .btn-edit {
-    background: #ffc107;
-    color: black;
+  background: #ffc107;
+  color: black;
 }
 
 .btn-edit:hover {
-    background: #e0a800;
+  background: #e0a800;
 }
 
 .btn-delete {
-    background: #dc3545;
+  background: #dc3545;
 }
 
 .btn-delete:hover {
-    background: #c82333;
+  background: #c82333;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
 }
 
 th {
-    background: #1F4E79;
-    color: white;
+  background: #1F4E79;
+  color: white;
 }
 
 th,
 td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
 }
 
 tr:nth-child(even) {
-    background: #f9f9f9;
+  background: #f9f9f9;
 }
 
 tr:hover {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 td img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 form input[name="cari"] {
-    width: 250px;
-    display: inline-block;
+  width: 250px;
+  display: inline-block;
 }
 
 form button {
-    padding: 8px 15px;
-    background: #1F4E79;
-    color: white;
-    border: none;
-    cursor: pointer;
+  padding: 8px 15px;
+  background: #1F4E79;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 form button:hover {
-    background: #163d5c;
+  background: #163d5c;
 }

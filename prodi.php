@@ -23,7 +23,7 @@ $data = mysqli_query($conn, "SELECT * FROM prodi");
             <h2>DATA PRODI</h2>
             <hr>
             <a href="tambah_prodi.php" class="tambah">TAMBAH DATA PRODI</a>
-            <br><br>
+            <br>
             <table>
                 <tr>
                     <th>Kode Prodi</th>

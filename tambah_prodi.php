@@ -32,6 +32,8 @@ if (isset($_POST['simpan'])){
 <div id="main">
     <div class="container">
 <form method="POST">
+    <h2>TAMBAH DATA PRODI</h2>
+    <hr>
     <label>Kode Prodi</label><br>
     <input type="text" name="kd_prodi" required><br><br>
     <label>Nama Prodi</label><br>
